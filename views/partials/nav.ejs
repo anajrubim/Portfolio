@@ -1,0 +1,16 @@
+<header>
+    <a href="/" class="logo">Ana</a>
+    <input type="checkbox" id="menu-toggle-checkbox">
+    <label for="menu-toggle-checkbox" class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </label>
+
+    <nav>
+        <a href="/" class="<%= activePage === 'home' ? 'active' : '' %>">Home</a>
+        <a href="/sobre" class="<%= activePage === 'sobre' ? 'active' : '' %>">Sobre</a>
+        <a href="/disciplinas" class="<%= activePage === 'disciplinas' ? 'active' : '' %>">Disciplinas</a>
+        <a href="/projetos" class="<%= activePage === 'projetos' ? 'active' : '' %>">Projetos</a>
+        <a href="/contato" class="<%= activePage === 'contato' ? 'active' : '' %>">Contato</a>
+        <a href="/dashboard" class="<%= activePage === 'dashboard' ? 'active' : '' %>">Dashboard</a>
+    </nav>
+</header>

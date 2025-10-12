@@ -1,0 +1,76 @@
+<%- include('../partials/header', { title: 'Projetos' }) %>
+<%- include('../partials/nav', { activePage: 'projetos' }) %>
+
+<section class="projeto" id="projeto">
+    <div class="content">
+        <div class="title"><span>Meus Projetos</span></div>
+        
+        <% projetos.forEach(projeto => { %>
+            <div class="projeto-details">
+                <div class="left">
+                    <div class="topic"><span><%= projeto.tipo %></span> <%= projeto.titulo %>:</div>
+                    <p><%= projeto.descricao %></p>
+                    <div class="tecnologias">
+                        <strong>Tecnologias:</strong>
+                        <% projeto.tecnologias.forEach(tech => { %>
+                            <span class="tech-tag"><%= tech %></span>
+                        <% }); %>
+                    </div>
+                    <% if (projeto.link && projeto.link !== '#') { %>
+                        <br>
+                        <p>
+                            <strong>GitHub:</strong> 
+                            <a href="<%= projeto.link %>" target="_blank"><%= projeto.link %></a>
+                        </p>
+                    <% } %>
+                    <div class="status">
+                        Status: <span class="<%= projeto.concluido ? 'concluido' : 'andamento' %>">
+                            <%= projeto.concluido ? 'Concluído' : 'Em andamento' %>
+                        </span>
+                    </div>
+                </div>
+                <div class="right">
+                    <img src="/<%= projeto.imagem %>" alt="<%= projeto.titulo %>">
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</section>
+
+<section class="certificados" id="certificações">
+    <div class="title">
+        <span>Certificados</span>
+    </div>
+    <div class="certificados-description">
+        <p>Confira abaixo meus certificados extracurriculares.</p>
+    </div>
+
+    <div class="certificados-grid">
+        <% certificados.forEach(certificado => { %>
+            <div class="grid-item">
+                <img src="/<%= certificado.imagem %>" alt="<%= certificado.titulo %>">
+                <p class="imagem-nome"><%= certificado.titulo %></p>
+            </div>
+        <% }); %>
+    </div>
+</section>
+
+<section class="galeria" id="projetos">
+    <div class="title">
+        <span>Galeria de Projetos</span>
+    </div>
+    <div class="galeria-description">
+        <p>Confira abaixo mais alguns projetos de design que desenvolvi.</p>
+    </div>
+
+    <div class="galeria-grid">
+        <% galeria.forEach(projeto => { %>
+            <div class="grid-item">
+                <img src="/<%= projeto.imagem %>" alt="<%= projeto.titulo %>">
+                <p class="imagem-nome"><%= projeto.titulo %></p>
+            </div>
+        <% }); %>
+    </div>
+</section>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,30 @@
+<%- include('../partials/header', { title: 'Sobre Mim' }) %>
+<%- include('../partials/nav', { activePage: 'sobre' }) %>
+
+<section class="about" id="about">
+    <div class="content">
+        <div class="title"><span>Sobre mim</span></div>
+        <div class="about-details">
+            <div class="right">
+                <div class="topic"><span>Design </span>é a minha paixão.</div>
+                <p>
+                    Olá! Me chamo <%= estudante.nomeCompleto %>, tenho <%= estudante.idade %> anos e sou estudante de 
+                    <strong><%= estudante.curso %></strong> na <%= estudante.instituicao %>. 
+                    Atualmente, atuo como <%= estudante.experiencia %>, onde venho desenvolvendo minhas habilidades profissionais 
+                    enquanto continuo me aperfeiçoando na área de tecnologia.
+
+                    Estou sempre em busca de novos conhecimentos e faço cursos complementares para fortalecer meu currículo. 
+                    Apesar de estar imersa no universo da tecnologia, é no design que encontro minha verdadeira paixão. 
+                    Gosto de criar, experimentar e transformar ideias em algo visualmente impactante e funcional.
+                </p>
+                <div class="button">
+                    <a href="/src/currículo_ana.pdf" download>
+                        <button>Download CV</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('../partials/footer') %>

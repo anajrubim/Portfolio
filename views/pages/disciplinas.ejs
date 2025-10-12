@@ -1,0 +1,99 @@
+<%- include('../partials/header', { title: 'Disciplinas' }) %>
+<%- include('../partials/nav', { activePage: 'disciplinas' }) %>
+
+<section class="disciplinas" id="disciplinas">
+    <div class="content">
+        <div class="title"><span>Minhas Disciplinas</span></div>
+        
+        <div class="disciplinas-info">
+            <p class="disciplinas-description">
+                Confira abaixo as disciplinas que já cursei ou estou cursando no curso de 
+                <strong><%= estudante.curso %></strong> na <strong><%= estudante.instituicao %></strong>.
+            </p>
+            
+            <div class="disciplinas-grid">
+                <% disciplinas.forEach((disciplina, index) => { %>
+                    <div class="disciplina-item">
+                        <div class="disciplina-number"><%= index + 1 %></div>
+                        <div class="disciplina-name"><%= disciplina %></div>
+                    </div>
+                <% }); %>
+            </div>
+            
+            <div class="disciplinas-stats">
+                <p><strong>Total de disciplinas: <%= disciplinas.length %></strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.disciplinas {
+    background-color: black;
+    padding: 60px 9%;
+    color: white;
+}
+
+.disciplinas-description {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    color: #ddd;
+}
+
+.disciplinas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 40px 0;
+}
+
+.disciplina-item {
+    background: rgba(0, 204, 204, 0.1);
+    border: 2px solid #00cccc;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.disciplina-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 204, 204, 0.3);
+}
+
+.disciplina-number {
+    background: #00cccc;
+    color: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.disciplina-name {
+    font-size: 1.6rem;
+    color: white;
+}
+
+.disciplinas-stats {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(0, 204, 204, 0.1);
+    border-radius: 10px;
+}
+
+.disciplinas-stats p {
+    font-size: 2rem;
+    color: #00cccc;
+}
+</style>
+
+<%- include('../partials/footer') %>

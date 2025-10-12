@@ -1,0 +1,72 @@
+<%- include('../partials/header', { title: 'Contato' }) %>
+<%- include('../partials/nav', { activePage: 'contato' }) %>
+
+<section class="contato" id="contato">
+    <div class="content">
+        <div class="title"><span>Contato</span></div>
+        
+        <div class="contato-container">
+            <div class="contato-info">
+                <div class="info-item">
+                    <i class="fas fa-user"></i>
+                    <div class="info-content">
+                        <h3>Nome</h3>
+                        <p><%= estudante.nomeCompleto %></p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="info-content">
+                        <h3>Curso</h3>
+                        <p><%= estudante.curso %></p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-university"></i>
+                    <div class="info-content">
+                        <h3>Instituição</h3>
+                        <p><%= estudante.instituicao %></p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="info-content">
+                        <h3>E-mail</h3>
+                        <p><%= estudante.email %></p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div class="info-content">
+                        <h3>Telefone</h3>
+                        <p><%= estudante.telefone %></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contato-redes">
+                <h3>Redes Sociais</h3>
+                <div class="redes-icons">
+                    <a href="https://www.linkedin.com/in/ana-j%C3%BAlia-rubim-41904234b" target="_blank" class="rede-link">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/anajrubim" target="_blank" class="rede-link">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.instagram.com/anajrubim" target="_blank" class="rede-link">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,22 @@
+<%- include('../partials/header', { title: 'Home' }) %>
+<%- include('../partials/nav', { activePage: 'home' }) %>
+
+<section class="home" id="home">
+    <div class="home-img">
+        <img src="/src/main.jpg" alt="Ana Júlia">
+    </div>
+    <div class="home-content">
+        <h1>Olá! Eu sou a <span><%= estudante.nome %>!</span></h1>
+        <h3 class="typing-text">Eu sou <span></span></h3>
+        <p>Oi! Eu sou <%= estudante.nomeCompleto %> e trabalho com front-end e design.
+            Gosto de criar interfaces que funcionam bem e, de preferência, que sejam bonitas. Aqui você vai ver um pouco do que já fiz, com foco em sites e layouts que entregam uma boa experiência sem complicação. 
+            Fica à vontade pra explorar e, se curtir, me chama pra tomar um café!</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/ana-j%C3%BAlia-rubim-41904234b" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/anajrubim" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/anajrubim" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+</section>
+
+<%- include('../partials/footer') %>
