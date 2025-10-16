@@ -59,6 +59,7 @@ Formulários HTML padrão só suportam GET e POST.
 <br>
 bash
 node server.js
+<br>
 Saída esperada no terminal: Servidor rodando em http://localhost:3000
 <br>
 
