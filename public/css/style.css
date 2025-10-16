@@ -1122,3 +1122,354 @@ footer {
 * {
     max-width: 100%;
 }
+
+.form-container {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: rgba(0, 204, 204, 0.1);
+    border-radius: 10px;
+    border: 1px solid #00cccc;
+}
+
+.form-title {
+    color: #00cccc;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.disciplina-form {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+.form-input {
+    padding: 1.2rem;
+    border-radius: 8px;
+    border: 2px solid #00cccc;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300cccc'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.5rem;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #00ffcc;
+    box-shadow: 0 0 15px rgba(0, 204, 204, 0.5);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+select.form-input {
+    cursor: pointer;
+}
+
+select.form-input option {
+    background: #000;
+    color: white;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+select.form-input:hover {
+    border-color: #00ffcc;
+    background-color: rgba(0, 204, 204, 0.1);
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    color: #00ffcc;
+    font-weight: 600;
+    text-shadow: 0 0 5px rgba(0, 204, 204, 0.5);
+}
+
+.form-container {
+    margin-top: 4rem;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    border: 2px solid #00cccc;
+    box-shadow: 0 0 30px rgba(0, 204, 204, 0.2);
+}
+
+.form-title {
+    color: #00ffcc;
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 2.5rem;
+    text-shadow: 0 0 10px rgba(0, 204, 204, 0.5);
+    border-bottom: 2px solid #00cccc;
+    padding-bottom: 1rem;
+}
+
+.btn-submit {
+    padding: 1.2rem 2rem;
+    background: linear-gradient(135deg, #00cccc, #00ffcc);
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #00ffcc, #00cccc);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 204, 204, 0.4);
+}
+.form-input::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+select.form-input:focus {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300ffcc'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 768px) {
+    .form-input {
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+    
+    select.form-input {
+        background-size: 1.2rem;
+        background-position: right 0.8rem center;
+    }
+    
+    .form-container {
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .form-title {
+        font-size: 2rem;
+    }
+}
+
+.btn-submit {
+    padding: 1rem;
+    background: #00cccc;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #00ffcc;
+    transform: translateY(-2px);
+}
+
+.delete-form {
+    display: inline;
+    margin-left: 1rem;
+}
+
+.btn-delete {
+    background: #ff4444;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-delete:hover {
+    background: #ff6666;
+    transform: scale(1.05);
+}
+
+.disciplina-info {
+    color: #cccccc;
+    font-size: 1.2rem;
+}
+
+.status-aprovada {
+    color: #00ff00 !important;
+}
+
+.status-cursando {
+    color: #00cccc !important;
+}
+
+.status-reprovada {
+    color: #ff4444 !important;
+}
+
+.status-trancada {
+    color: #ffff00 !important;
+}
+
+.btn-edit {
+    background: #00cccc;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    margin-left: 0.5rem;
+}
+
+.btn-edit:hover {
+    background: #00ffcc;
+    transform: scale(1.05);
+}
+
+.projeto-form {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-textarea {
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #00cccc;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.4rem;
+    min-height: 100px;
+    resize: vertical;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #00ffcc;
+    box-shadow: 0 0 10px rgba(0, 204, 204, 0.5);
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        margin-top: 2rem;
+        padding: 1.5rem;
+    }
+    
+    .disciplina-form,
+    .projeto-form {
+        gap: 1rem;
+    }
+    
+    .form-input,
+    .form-textarea {
+        padding: 0.8rem;
+        font-size: 1.2rem;
+    }
+    
+    .btn-submit {
+        padding: 0.8rem;
+        font-size: 1.4rem;
+    }
+    
+    .btn-delete,
+    .btn-edit {
+        padding: 0.4rem 0.8rem;
+        font-size: 1rem;
+        margin-left: 0.5rem;
+    }
+    
+    .delete-form {
+        display: block;
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+.disciplinas {
+    background-color: black;
+    padding: 60px 9%;
+    color: white;
+}
+
+.disciplinas-description {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+    color: #ddd;
+}
+
+.disciplinas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 40px 0;
+}
+
+.disciplina-item {
+    background: rgba(0, 204, 204, 0.1);
+    border: 2px solid #00cccc;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.disciplina-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 204, 204, 0.3);
+}
+
+.disciplina-number {
+    background: #00cccc;
+    color: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.disciplina-name {
+    font-size: 1.6rem;
+    color: white;
+    flex: 1;
+}
+
+.disciplina-info {
+    color: #cccccc;
+    font-size: 1.2rem;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.disciplinas-stats {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(0, 204, 204, 0.1);
+    border-radius: 10px;
+}
+
+.disciplinas-stats p {
+    font-size: 2rem;
+    color: #00cccc;
+}

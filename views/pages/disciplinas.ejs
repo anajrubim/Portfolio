@@ -15,7 +15,21 @@
                 <% disciplinas.forEach((disciplina, index) => { %>
                     <div class="disciplina-item">
                         <div class="disciplina-number"><%= index + 1 %></div>
-                        <div class="disciplina-name"><%= disciplina %></div>
+                        <div class="disciplina-name">
+                            <strong><%= disciplina.nome %></strong>
+                            <% if (disciplina.professor) { %>
+                                <br><small class="disciplina-info">Professor: <%= disciplina.professor %></small>
+                            <% } %>
+                            <% if (disciplina.semestre) { %>
+                                <br><small class="disciplina-info">Semestre: <%= disciplina.semestre %>º</small>
+                            <% } %>
+                            <% if (disciplina.status) { %>
+                                <br><small class="disciplina-info">Status: <span class="status-<%= disciplina.status %>"><%= disciplina.status %></span></small>
+                            <% } %>
+                        </div>
+                        <form action="/disciplinas/<%= disciplina.id %>?_method=DELETE" method="POST" class="delete-form">
+                            <button type="submit" class="btn-delete">Excluir</button>
+                        </form>
                     </div>
                 <% }); %>
             </div>
@@ -24,76 +38,29 @@
                 <p><strong>Total de disciplinas: <%= disciplinas.length %></strong></p>
             </div>
         </div>
+        <div class="form-container">
+            <h3 class="form-title">Adicionar Nova Disciplina</h3>
+            <form action="/disciplinas" method="POST" class="disciplina-form">
+                <input type="text" name="nome" placeholder="Nome da disciplina" required class="form-input">
+                <input type="text" name="professor" placeholder="Professor" class="form-input">
+                <select name="semestre" class="form-input">
+                    <option value="1">1º Semestre</option>
+                    <option value="2">2º Semestre</option>
+                    <option value="3">3º Semestre</option>
+                    <option value="4">4º Semestre</option>
+                    <option value="5">5º Semestre</option>
+                    <option value="6">6º Semestre</option>
+                </select>
+                <select name="status" class="form-input">
+                    <option value="cursando">Cursando</option>
+                    <option value="aprovada">Aprovada</option>
+                    <option value="reprovada">Reprovada</option>
+                    <option value="trancada">Trancada</option>
+                </select>
+                <button type="submit" class="btn-submit">Adicionar Disciplina</button>
+            </form>
+        </div>
     </div>
 </section>
-
-<style>
-.disciplinas {
-    background-color: black;
-    padding: 60px 9%;
-    color: white;
-}
-
-.disciplinas-description {
-    text-align: center;
-    font-size: 1.6rem;
-    margin-bottom: 40px;
-    color: #ddd;
-}
-
-.disciplinas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 40px 0;
-}
-
-.disciplina-item {
-    background: rgba(0, 204, 204, 0.1);
-    border: 2px solid #00cccc;
-    border-radius: 10px;
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    transition: transform 0.3s ease;
-}
-
-.disciplina-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(0, 204, 204, 0.3);
-}
-
-.disciplina-number {
-    background: #00cccc;
-    color: black;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.8rem;
-}
-
-.disciplina-name {
-    font-size: 1.6rem;
-    color: white;
-}
-
-.disciplinas-stats {
-    text-align: center;
-    margin-top: 3rem;
-    padding: 2rem;
-    background: rgba(0, 204, 204, 0.1);
-    border-radius: 10px;
-}
-
-.disciplinas-stats p {
-    font-size: 2rem;
-    color: #00cccc;
-}
-</style>
 
 <%- include('../partials/footer') %>

@@ -71,6 +71,19 @@
             </div>
         <% }); %>
     </div>
+
+    <div class="form-container">
+        <h3 class="form-title">Adicionar Novo Projeto</h3>
+        <form action="/projetos" method="POST" class="projeto-form">
+            <input type="text" name="titulo" placeholder="Título do projeto" required class="form-input">
+            <input type="text" name="tipo" placeholder="Tipo (TCC, API, etc.)" class="form-input">
+            <textarea name="descricao" placeholder="Descrição do projeto" class="form-textarea"></textarea>
+            <input type="text" name="tecnologias" placeholder="Tecnologias (separadas por vírgula)" class="form-input">
+            <input type="text" name="imagem" placeholder="URL da imagem" class="form-input">
+            <input type="text" name="link" placeholder="Link do projeto" class="form-input">
+            <button type="submit" class="btn-submit">Adicionar Projeto</button>
+        </form>
+    </div>
 </section>
 
 <%- include('../partials/footer') %>

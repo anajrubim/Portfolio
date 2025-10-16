@@ -10,13 +10,103 @@ const estudante = {
     telefone: "(12) 99666-4754"
 };
 
-const disciplinas = [
-    "Desenvolvimento Web II",
-    "Engenharia de Software II",
-    "Técnicas de Programação",
-    "Banco de Dados Relacional",
-    "Matemática para Computação",
-    "Estrutura de Dados",
+let disciplinas = [
+    { 
+        id: 1, 
+        nome: "Algoritmos e Lógica de Programação", 
+        professor: "Prof. Masanori", 
+        semestre: 1, 
+        status: "concluído", 
+        dataCriacao: "2025-02-01" 
+    },
+    { 
+        id: 2, 
+        nome: "Desenvolvimento Web I", 
+        professor: "Prof. Jean", 
+        semestre: 1, 
+        status: "concluído", 
+        dataCriacao: "2025-02-01" 
+    },
+    { 
+        id: 3, 
+        nome: "Engenharia de Software I", 
+        professor: "Prof. Juliana", 
+        semestre: 1, 
+        status: "concluído", 
+        dataCriacao: "2025-02-01" 
+    },
+    { 
+        id: 4, 
+        nome: "Sistemas Operacionais", 
+        professor: "Prof. Dawilmar", 
+        semestre: 1, 
+        status: "concluído", 
+        dataCriacao: "2025-02-01" 
+    },
+    { 
+        id: 5, 
+        nome: "Modelagem de Banco de Dados", 
+        professor: "Prof. Juliana", 
+        semestre: 1, 
+        status: "concluído", 
+        dataCriacao: "2025-02-01" 
+    },
+    { 
+        id: 6, 
+        nome: "Design Digital", 
+        professor: "Prof. Jean", 
+        semestre: 1, 
+        status: "concluído", 
+        dataCriacao: "2025-02-01" 
+    },
+    { 
+        id: 7, 
+        nome: "Técnicas de Programação", 
+        professor: "Prof. Gerson", 
+        semestre: 2, 
+        status: "cursando", 
+        dataCriacao: "2025-06-01" 
+    },
+    { 
+        id: 8, 
+        nome: "Desenvolvimento Web II", 
+        professor: "Prof. Cláudio", 
+        semestre: 2, 
+        status: "cursando", 
+        dataCriacao: "2025-06-01" 
+    },
+    { 
+        id: 9, 
+        nome: "Engenharia de Software II", 
+        professor: "Prof. Walmir", 
+        semestre: 2, 
+        status: "cursando", 
+        dataCriacao: "2025-06-01" 
+    },
+    { 
+        id: 10, 
+        nome: "Matemática para computação", 
+        professor: "Prof. Arakaki", 
+        semestre: 2, 
+        status: "cursando", 
+        dataCriacao: "2025-06-01" 
+    },
+    { 
+        id: 11, 
+        nome: "Banco de Dados Relacional", 
+        professor: "Prof. Juliana", 
+        semestre: 2, 
+        status: "cursando", 
+        dataCriacao: "2025-06-01" 
+    },
+    { 
+        id: 12, 
+        nome: "Estrutura de Dados", 
+        professor: "Prof. Masanori", 
+        semestre: 2, 
+        status: "cursando", 
+        dataCriacao: "2025-06-01"  
+    }
 ];
 
 const projetos = [
