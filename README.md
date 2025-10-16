@@ -8,40 +8,34 @@ Este é um portfólio acadêmico desenvolvido com Node.js, Express e EJS, criado
 <br>
 <h3>Backend</h3>
 <br>
-<li>
-<ul>Node.js - Ambiente de execução JavaScript;</ul>
-
-<ul>Express.js - Framework web para Node.js;</ul>
-
-<ul>EJS - Motor de templates;</ul>
-
-<ul>Method-Override - Middleware para métodos HTTP.</ul>
-</li>
+Node.js - Ambiente de execução JavaScript;
+<br>
+Express.js - Framework web para Node.js;
+<br>
+EJS - Motor de templates;
+<br>
+Method-Override - Middleware para métodos HTTP.
 <br>
 <h3>Frontend</h3>
 <br>
-<li>
-<ul>HTML5 - Estrutura semântica;
-
+HTML5 - Estrutura semântica;
+<br>
 CSS3 - Estilização moderna;
-
+<br>
 JavaScript - Interatividade;
-
-Design System - Tema escuro com azul ciano.</ul>
-</li>
+<br>
+Design System - Tema escuro com azul ciano.
 <br>
 
 <h2>⚙️ Instalação e Configuração</h2>
 <br>
 <h3>Pré-requisitos:</h3>
 <br>
-<li>
-<ul>Node.js (versão 14 ou superior);</ul>
-
-<ul>NPM (vem incluído com Node.js);</ul>
-
-<ul>Git para controle de versão.</ul>
-</li>
+Node.js (versão 14 ou superior);
+<br>
+NPM (vem incluído com Node.js);
+<br>
+Git para controle de versão.
 <br>
 <h2>🚀 Comandos de Instalação e Execução</h2>
 <br>
@@ -57,13 +51,10 @@ npm install method-override
 <br>
 <h3>Por que precisamos do method-override?</h3>
 <br>
-
-<ul>Permite usar métodos HTTP PUT e DELETE em formulários HTML;</ul>
-
-<ul>Formulários HTML padrão só suportam GET e POST. </ul>
-
+Permite usar métodos HTTP PUT e DELETE em formulários HTML;
 <br>
-
+Formulários HTML padrão só suportam GET e POST.
+<br>
 <h3>3. ▶️ Executar o Projeto</h3>
 <br>
 bash
@@ -80,8 +71,11 @@ nodemon server.js
 <h2>👩‍💻 Desenvolvedora</h2>
 <br>
 Ana Júlia Rubim
+<br>
 🎓 Estudante de Desenvolvimento de Software Multiplataforma
+<br>
 🏫 FATEC São José dos Campos
+<br>
 💻 Foco em Front-end e Design
 <br>
 
