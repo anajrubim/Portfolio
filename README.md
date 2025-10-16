@@ -21,13 +21,13 @@ Este é um portfólio acadêmico desenvolvido com Node.js, Express e EJS, criado
 <h3>Frontend</h3>
 <br>
 <li>
-<ul>HTML5 - Estrutura semântica;</ul>
+<ul>HTML5 - Estrutura semântica;
 
-<ul>CSS3 - Estilização moderna;</ul>
+CSS3 - Estilização moderna;
 
-<ul>JavaScript - Interatividade;</ul>
+JavaScript - Interatividade;
 
-<ul>Design System - Tema escuro com azul ciano.</ul>
+Design System - Tema escuro com azul ciano.</ul>
 </li>
 <br>
 
