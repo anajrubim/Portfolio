@@ -1,73 +1,89 @@
-🎓 Portfólio Acadêmico - Ana Júlia Rubim
-📋 Sobre o Projeto
+<h1>🎓 Portfólio Acadêmico - Ana Júlia Rubim</h1>
+<br>
+<h2>📋 Sobre o Projeto</h2>
+<br>
 Este é um portfólio acadêmico desenvolvido com Node.js, Express e EJS, criado para demonstrar habilidades em desenvolvimento web full-stack. O projeto inclui um sistema completo de CRUD (Create, Read, Update, Delete) para gerenciar disciplinas, projetos e certificados.
+<br>
+<h2>🛠 Tecnologias Utilizadas</h2>
+<br>
+<h3>Backend</h3>
+<br>
+<li>
+<ul>Node.js - Ambiente de execução JavaScript;</ul>
 
-🛠 Tecnologias Utilizadas
-Backend
-Node.js - Ambiente de execução JavaScript
+<ul>Express.js - Framework web para Node.js;</ul>
 
-Express.js - Framework web para Node.js
+<ul>EJS - Motor de templates;</ul>
 
-EJS - Motor de templates
+<ul>Method-Override - Middleware para métodos HTTP.</ul>
+</li>
+<br>
+<h3>Frontend</h3>
+<br>
+<li>
+<ul>HTML5 - Estrutura semântica;</ul>
 
-Method-Override - Middleware para métodos HTTP
+<ul>CSS3 - Estilização moderna;</ul>
 
-Frontend
-HTML5 - Estrutura semântica
+<ul>JavaScript - Interatividade;</ul>
 
-CSS3 - Estilização moderna
+<ul>Design System - Tema escuro com azul ciano.</ul>
+</li>
+<br>
 
-JavaScript - Interatividade
+<h2>⚙️ Instalação e Configuração</h2>
+<br>
+<h3>Pré-requisitos:</h3>
+<br>
+<li>
+<ul>Node.js (versão 14 ou superior);</ul>
 
-Design System - Tema escuro com azul ciano
+<ul>NPM (vem incluído com Node.js);</ul>
 
-⚙️ Instalação e Configuração
-Pré-requisitos
-Node.js (versão 14 ou superior)
-
-NPM (vem incluído com Node.js)
-
-Git para controle de versão
-
-🚀 Comandos de Instalação e Execução
-1. 📥 Instalar Dependências
+<ul>Git para controle de versão.</ul>
+</li>
+<br>
+<h2>🚀 Comandos de Instalação e Execução</h2>
+<br>
+<h3>1. 📥 Instalar Dependências</h3>
+<br>
 bash
 npm install
-
-2. 🔧 Instalar Method-Override (Caso Necessário)
+<br>
+<h3>2. 🔧 Instalar Method-Override (Caso Necessário)</h3>
+<br>
 bash
 npm install method-override
+<br>
+<h3>Por que precisamos do method-override?</h3>
+<br>
 
-Por que precisamos do method-override?
+<ul>Permite usar métodos HTTP PUT e DELETE em formulários HTML;</ul>
 
-Permite usar métodos HTTP PUT e DELETE em formulários HTML
+<ul>Formulários HTML padrão só suportam GET e POST. </ul>
 
-Formulários HTML padrão só suportam GET e POST
+<br>
 
-3. ▶️ Executar o Projeto
+<h3>3. ▶️ Executar o Projeto</h3>
+<br>
 bash
 node server.js
-Saída esperada no terminal:
+Saída esperada no terminal: Servidor rodando em http://localhost:3000
+<br>
 
-text
-Servidor rodando em http://localhost:3000
-
-Para desenvolvimento com auto-reload:
-
+<h3>Para desenvolvimento com auto-reload:</h3>
+<br>
 bash
 npm install -g nodemon
 nodemon server.js
-
-👩‍💻 Desenvolvedora
-
+<br>
+<h2>👩‍💻 Desenvolvedora</h2>
+<br>
 Ana Júlia Rubim
 🎓 Estudante de Desenvolvimento de Software Multiplataforma
 🏫 FATEC São José dos Campos
 💻 Foco em Front-end e Design
-
-📄 Licença
-
-Este projeto é para fins educacionais e acadêmicos.
+<br>
 
 <div align="center">
 Desenvolvido por Ana Júlia Rubim © Todos os direitos reservados.
