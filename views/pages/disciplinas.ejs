@@ -38,28 +38,6 @@
                 <p><strong>Total de disciplinas: <%= disciplinas.length %></strong></p>
             </div>
         </div>
-        <div class="form-container">
-            <h3 class="form-title">Adicionar Nova Disciplina</h3>
-            <form action="/disciplinas" method="POST" class="disciplina-form">
-                <input type="text" name="nome" placeholder="Nome da disciplina" required class="form-input">
-                <input type="text" name="professor" placeholder="Professor" class="form-input">
-                <select name="semestre" class="form-input">
-                    <option value="1">1º Semestre</option>
-                    <option value="2">2º Semestre</option>
-                    <option value="3">3º Semestre</option>
-                    <option value="4">4º Semestre</option>
-                    <option value="5">5º Semestre</option>
-                    <option value="6">6º Semestre</option>
-                </select>
-                <select name="status" class="form-input">
-                    <option value="cursando">Cursando</option>
-                    <option value="aprovada">Aprovada</option>
-                    <option value="reprovada">Reprovada</option>
-                    <option value="trancada">Trancada</option>
-                </select>
-                <button type="submit" class="btn-submit">Adicionar Disciplina</button>
-            </form>
-        </div>
     </div>
 </section>
 

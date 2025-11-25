@@ -1,165 +1,92 @@
 <%- include('../partials/header', { title: 'Dashboard' }) %>
 <%- include('../partials/nav', { activePage: 'dashboard' }) %>
 
-<section class="dashboard" id="dashboard">
-    <div class="content">
-        <div class="title"><span>Dashboard do Portfólio</span></div>
-        
-        <div class="dashboard-stats">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-book"></i>
+<section class="dashboard">
+    <div class="title">
+        <span>Dashboard de Estatísticas</span>
+    </div>
+
+    <div class="dashboard-stats">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="stat-info">
+                    <h3><%= stats.totalDisciplinas %></h3>
+                    <p>Total de Disciplinas</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-info">
+                    <h3><%= stats.disciplinasConcluidas %></h3>
+                    <p>Disciplinas Concluídas</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="stat-info">
+                    <h3><%= stats.projetosConcluidos %> / <%= stats.totalProjetos %></h3>
+                    <p>Projetos Concluídos</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tech-section">
+            <h3>💻 Tecnologias Mais Usadas</h3>
+            <div class="tech-tags">
+                <% stats.tecnologiasPopulares.forEach(([tech, count]) => { %>
+                    <span class="tech-tag"><%= tech %>: <%= count %> projeto(s)</span>
+                <% }); %>
+            </div>
+        </div>
+
+        <div class="profile-summary">
+            <h3>📊 Resumo do Perfil</h3>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <strong>Nome:</strong> <%= estudante.nomeCompleto %>
+                </div>
+                <div class="summary-item">
+                    <strong>Curso:</strong> <%= estudante.curso %>
+                </div>
+                <div class="summary-item">
+                    <strong>Instituição:</strong> <%= estudante.instituicao %>
+                </div>
+                <div class="summary-item">
+                    <strong>Ano de Ingresso:</strong> <%= estudante.anoIngresso %>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <h3>📈 Progresso Acadêmico</h3>
+            <div class="progress-grid">
+                <div class="progress-item">
+                    <label>Disciplinas Concluídas</label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: <%= (stats.disciplinasConcluidas / stats.totalDisciplinas * 100).toFixed(0) %>%"></div>
                     </div>
-                    <div class="stat-info">
-                        <h3><%= stats.totalDisciplinas %></h3>
-                        <p>Disciplinas Cursadas</p>
-                    </div>
+                    <span><%= (stats.disciplinasConcluidas / stats.totalDisciplinas * 100).toFixed(0) %>%</span>
                 </div>
                 
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-check-circle"></i>
+                <div class="progress-item">
+                    <label>Projetos Concluídos</label>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: <%= (stats.projetosConcluidos / stats.totalProjetos * 100).toFixed(0) %>%"></div>
                     </div>
-                    <div class="stat-info">
-                        <h3><%= stats.projetosConcluidos %></h3>
-                        <p>Projetos Concluídos</p>
-                    </div>
-                </div>
-                
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <div class="stat-info">
-                        <h3><%= stats.totalCertificados %></h3>
-                        <p>Certificados</p>
-                    </div>
-                </div>
-                
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-images"></i>
-                    </div>
-                    <div class="stat-info">
-                        <h3><%= stats.totalProjetosGaleria %></h3>
-                        <p>Projetos na Galeria</p>
-                    </div>
-                </div>
-            </div>
-            <div class="tech-section">
-                <h3>Tecnologias Utilizadas</h3>
-                <div class="tech-tags">
-                    <% stats.tecnologias.forEach(function(tech) { %>
-                        <span class="tech-tag"><%= tech %></span>
-                    <% }); %>
-                </div>
-            </div>
-            
-            <div class="profile-summary">
-                <h3>Resumo do Perfil</h3>
-                <div class="summary-grid">
-                    <div class="summary-item">
-                        <strong>Nome:</strong> <%= estudante.nomeCompleto %>
-                    </div>
-                    <div class="summary-item">
-                        <strong>Curso:</strong> <%= estudante.curso %>
-                    </div>
-                    <div class="summary-item">
-                        <strong>Instituição:</strong> <%= estudante.instituicao %>
-                    </div>
-                    <div class="summary-item">
-                        <strong>Ano de Ingresso:</strong> <%= estudante.anoIngresso %>
-                    </div>
-                    <div class="summary-item">
-                        <strong>Experiência:</strong> <%= estudante.experiencia %>
-                    </div>
-                    <div class="summary-item">
-                        <strong>Área de Interesse:</strong> Front-end e Design
-                    </div>
-                </div>
-            </div>
-            
-            <div class="progress-section">
-                <h3>Métricas de Progresso</h3>
-                <div class="progress-grid">
-                    <div class="progress-item">
-                        <label>Progresso no Curso</label>
-                        <div class="progress-bar">
-                            <div class="progress-fill progress-curso"></div>
-                        </div>
-                        <span class="percent-curso">60%</span>
-                    </div>
-                    
-                    <div class="progress-item">
-                        <label>Habilidades Técnicas</label>
-                        <div class="progress-bar">
-                            <div class="progress-fill progress-habilidades"></div>
-                        </div>
-                        <span class="percent-habilidades">75%</span>
-                    </div>
-                    
-                    <div class="progress-item">
-                        <label>Projetos Concluídos</label>
-                        <div class="progress-bar">
-                            <div class="progress-fill progress-projetos"></div>
-                        </div>
-                        <span class="percent-projetos">
-                            <% if (projetos.length > 0) { %>
-                                <%= Math.round((stats.projetosConcluidos / projetos.length) * 100) %>%
-                            <% } else { %>
-                                0%
-                            <% } %>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="detailed-stats">
-                <h3>Estatísticas Detalhadas</h3>
-                <div class="stats-cards">
-                    <div class="detail-card">
-                        <h4>Disciplinas por Semestre</h4>
-                        <div class="detail-value">
-                            <%= Math.ceil(stats.totalDisciplinas / 4) %> por semestre
-                        </div>
-                    </div>
-                    <div class="detail-card">
-                        <h4>Taxa de Conclusão</h4>
-                        <div class="detail-value">
-                            <% if (projetos.length > 0) { %>
-                                <%= Math.round((stats.projetosConcluidos / projetos.length) * 100) %>%
-                            <% } else { %>
-                                0%
-                            <% } %>
-                        </div>
-                    </div>
-                    <div class="detail-card">
-                        <h4>Projetos por Mês</h4>
-                        <div class="detail-value">
-                            <%= ((stats.totalProjetosGaleria + projetos.length) / 6).toFixed(1) %> em média
-                        </div>
-                    </div>
+                    <span><%= (stats.projetosConcluidos / stats.totalProjetos * 100).toFixed(0) %>%</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-
-    setTimeout(function() {
-        document.querySelector('.progress-curso').style.width = '60%';
-        document.querySelector('.progress-habilidades').style.width = '75%';
-        
-        <% if (projetos.length > 0) { %>
-            const progressoProjetos = <%= (stats.projetosConcluidos / projetos.length) * 100 %>;
-            document.querySelector('.progress-projetos').style.width = Math.min(progressoProjetos, 100) + '%';
-        <% } else { %>
-            document.querySelector('.progress-projetos').style.width = '0%';
-        <% } %>
-    }, 500);
-});
-</script>
 
 <%- include('../partials/footer') %>
